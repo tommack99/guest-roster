@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Digital Fox Talent | Guest Appearances & Press</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#15110E;
+    --paper:#FAF7F2;
+    --card:#FFFFFF;
+    --orange:#FF8800;
+    --amber:#FFB800;
+    --muted:#7A7064;
+    --line:#E7E0D6;
+    --movies:#FF8800;
+    --gaming:#15110E;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    font-family:"Inter",system-ui,sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+
+  /* ---------- top bar (solid white) ---------- */
+  .topbar{background:#fff;border-bottom:1px solid var(--line)}
+  .brandbar{
+    display:flex;align-items:center;justify-content:space-between;
+    gap:20px;padding:20px 28px;max-width:1180px;margin:0 auto;
+  }
+  .brandbar img{height:30px;width:auto;display:block}
+  .brandbar .contact{font-size:12.5px;color:var(--muted);text-align:right;letter-spacing:.01em}
+  .brandbar .contact a{color:var(--muted);text-decoration:none}
+  .brandbar .contact a:hover{color:var(--orange)}
+
+  /* ---------- masthead (solid orange) ---------- */
+  .masthead{position:relative;overflow:hidden;color:#fff;background:var(--orange)}
+  .masthead .wrap{padding:46px 28px 38px}
+  .eyebrow{
+    font-family:"Archivo";font-weight:800;font-size:12px;letter-spacing:.32em;
+    text-transform:uppercase;color:#3A1B09;margin-bottom:14px;
+  }
+  .masthead h1{
+    font-family:"Archivo";font-weight:900;line-height:.94;
+    font-size:clamp(38px,7vw,84px);letter-spacing:-.01em;text-transform:uppercase;
+    max-width:13ch;color:#fff;
+  }
+  .masthead .sub{margin-top:16px;font-size:clamp(15px,1.7vw,18px);max-width:56ch;color:#FFF1E6;font-weight:400}
+  .creds{
+    margin-top:22px;display:flex;flex-wrap:wrap;gap:10px 0;align-items:center;
+    font-family:"Archivo";font-weight:700;font-size:13px;letter-spacing:.04em;color:#fff;
+  }
+  .creds span{padding:0 16px;border-left:1px solid rgba(255,255,255,.45)}
+  .creds span:first-child{padding-left:0;border-left:0}
+
+  .ticker{
+    border-top:1px solid rgba(0,0,0,.12);border-bottom:1px solid rgba(0,0,0,.12);
+    background:rgba(0,0,0,.13);overflow:hidden;white-space:nowrap;
+  }
+  .ticker-track{
+    display:inline-block;padding:11px 0;animation:scroll 60s linear infinite;
+    font-family:"Archivo";font-weight:700;font-size:13px;letter-spacing:.06em;color:#fff;
+  }
+  .ticker-track span{padding:0 26px;position:relative}
+  .ticker-track span::after{content:"\25C6";position:absolute;right:-4px;top:1px;color:#3A1B09;font-size:7px}
+  @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  /* prepared-for */
+  .preparedwrap{display:none}
+  .preparedwrap.show{display:block}
+  .preparedfor{
+    margin-top:24px;display:inline-flex;align-items:center;gap:10px;
+    background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.45);
+    border-radius:999px;padding:8px 8px 8px 18px;
+  }
+  .preparedfor label{font-family:"Archivo";font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#3A1B09}
+  .preparedfor input{
+    background:#fff;border:0;border-radius:999px;padding:8px 16px;font-family:"Inter";
+    font-size:14px;font-weight:600;color:var(--ink);min-width:200px;
+  }
+  .preparedfor input:focus{outline:2px solid #3A1B09;outline-offset:1px}
+
+  /* ---------- distribution banner ---------- */
+  .distbanner{
+    margin:26px 0 4px;background:var(--ink);color:#fff;border-radius:16px;padding:24px 26px;
+  }
+  .distbanner .db-head{
+    font-family:"Archivo";font-weight:800;font-size:17px;letter-spacing:.01em;
+  }
+  .distbanner .db-head span{color:var(--amber)}
+  .distbanner .db-sub{font-size:13.5px;color:#CFC7BB;margin-top:7px;max-width:74ch;line-height:1.55}
+  .db-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+  .db-chips span{
+    font-family:"Archivo";font-weight:700;font-size:12px;letter-spacing:.02em;
+    background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);
+    padding:7px 12px;border-radius:8px;color:#fff;
+  }
+  .db-chips span b{color:var(--amber);font-weight:800}
+  .db-chips span.lead{background:var(--orange);border-color:var(--orange)}
+  .db-chips span.lead b{color:#fff}
+
+  /* ---------- summary + controls ---------- */
+  .summary{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 26px;padding:26px 0 18px;border-bottom:1px solid var(--line)}
+  .summary .stat b{font-family:"Archivo";font-weight:900;font-size:26px;letter-spacing:-.01em;color:var(--ink)}
+  .summary .stat em{font-style:normal;color:var(--muted);font-size:13.5px;margin-left:7px}
+
+  .controls{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;padding:18px 0;position:sticky;top:0;z-index:30;background:var(--paper)}
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chip{font-family:"Archivo";font-weight:700;font-size:12.5px;letter-spacing:.04em;padding:8px 15px;border-radius:999px;border:1.5px solid var(--line);background:#fff;color:var(--ink);cursor:pointer;transition:.16s}
+  .chip:hover{border-color:var(--ink)}
+  .chip.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+  .rightctl{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+  select.sort{font-family:"Inter";font-weight:600;font-size:13.5px;color:var(--ink);border:1.5px solid var(--line);border-radius:10px;padding:9px 12px;background:#fff;cursor:pointer}
+  .btn{font-family:"Archivo";font-weight:700;font-size:12.5px;letter-spacing:.04em;border:1.5px solid var(--ink);border-radius:10px;padding:9px 16px;background:#fff;color:var(--ink);cursor:pointer;transition:.16s}
+  .btn:hover{background:var(--ink);color:#fff}
+  .btn.primary{background:var(--orange);border-color:var(--orange);color:#fff}
+  .btn.primary:hover{background:#E67A00;border-color:#E67A00}
+
+  /* tailor bar */
+  .tailor{display:none;align-items:center;flex-wrap:wrap;gap:12px;margin:6px 0 4px;padding:16px 18px;border-radius:14px;background:#fff;border:1.5px solid var(--orange)}
+  .tailor.show{display:flex}
+  .tailor .hint{font-size:13.5px;color:var(--muted);flex:1;min-width:200px}
+  .tailor .hint b{color:var(--ink);font-weight:600}
+  .tailor input{border:1.5px solid var(--line);border-radius:10px;padding:9px 13px;font-family:"Inter";font-size:14px;font-weight:500;min-width:190px}
+  .tailor input:focus{outline:2px solid var(--amber);outline-offset:1px;border-color:var(--amber)}
+
+  /* ---------- grid + cards ---------- */
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:18px;padding:26px 0 8px}
+  .card{position:relative;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:14px;opacity:0;transform:translateY(10px);transition:opacity .4s,transform .4s,box-shadow .18s,border-color .18s}
+  .card.in{opacity:1;transform:none}
+  .card:hover{box-shadow:0 14px 34px -22px rgba(21,17,14,.5);border-color:#D7CEC1}
+  .card.hidden{display:none}
+
+  .cardmedia{position:relative;aspect-ratio:16/9;border-radius:12px;overflow:hidden;background:var(--ink);cursor:pointer}
+  .cardmedia .poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .cardmedia video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .25s}
+  .cardmedia.playing video{opacity:1}
+  .cardmedia .ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;color:#fff;background:linear-gradient(135deg,#2A1206,var(--orange))}
+  .cardmedia .ph svg{width:30px;height:30px;opacity:.92}
+  .cardmedia .ph span{font-family:"Archivo";font-weight:700;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;opacity:.92}
+  .cardmedia .badge{position:absolute;left:10px;bottom:10px;display:flex;align-items:center;gap:6px;background:rgba(0,0,0,.55);color:#fff;font-family:"Archivo";font-weight:700;font-size:10px;letter-spacing:.06em;text-transform:uppercase;padding:5px 9px;border-radius:7px;opacity:1;transition:.2s}
+  .cardmedia.playing .badge{opacity:0}
+  .cardmedia .badge svg{width:10px;height:10px}
+  .cardmedia .tag-sample{position:absolute;right:10px;top:10px;background:rgba(0,0,0,.5);color:#fff;font-family:"Archivo";font-size:9px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 7px;border-radius:6px}
+  .chead{display:flex;gap:14px;align-items:center}
+  .avatar{width:58px;height:58px;border-radius:14px;flex-shrink:0;object-fit:cover;background:var(--ink);border:2px solid #fff;box-shadow:0 0 0 1px var(--line)}
+  .avatar.mono{display:flex;align-items:center;justify-content:center;color:#fff;font-family:"Archivo";font-weight:900;font-size:22px;letter-spacing:-.02em}
+  .cname{font-family:"Archivo";font-weight:800;font-size:19px;line-height:1.1;letter-spacing:-.01em}
+  .showname{font-size:12px;color:var(--orange);font-weight:600;margin-top:3px}
+  .cmeta{margin-top:5px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .handle{font-size:13px;color:var(--muted);font-weight:500}
+  .nichetag{font-family:"Archivo";font-weight:700;font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;padding:3px 9px;border-radius:999px;color:#fff}
+
+  .expo{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:13px 0;display:flex;align-items:flex-end;justify-content:space-between;gap:12px}
+  .expo .lab{font-family:"Archivo";font-weight:700;font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted)}
+  .expo .big{font-family:"Archivo";font-weight:900;font-size:32px;line-height:1;letter-spacing:-.02em;color:var(--ink);margin-top:4px}
+  .showviews{text-align:right;flex-shrink:0}
+  .showviews .sv{font-family:"Archivo";font-weight:900;font-size:20px;color:var(--orange);line-height:1}
+  .showviews .svk{font-family:"Archivo";font-weight:700;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:3px}
+  .showviews.req .sv{font-size:13px;color:var(--muted);font-weight:600}
+
+  .platforms{display:flex;gap:7px;flex-wrap:wrap}
+  .pf{flex:1;min-width:60px;background:#FBF8F3;border:1px solid var(--line);border-radius:10px;padding:9px 8px;text-align:center}
+  .pf .v{font-family:"Archivo";font-weight:800;font-size:15px;letter-spacing:-.01em;color:var(--ink)}
+  .pf .k{font-size:10px;color:var(--muted);font-weight:600;letter-spacing:.03em;margin-top:1px}
+
+  .showmeta{font-size:12px;color:var(--muted);line-height:1.5}
+  .showmeta b{color:var(--ink);font-weight:600;font-family:"Archivo";font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;display:block;margin-bottom:3px}
+
+  .cfoot{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:auto}
+  .loc{font-size:13px;color:var(--muted);display:flex;align-items:center;gap:5px}
+  .loc.na{opacity:.65}
+  .loc svg{width:13px;height:13px;flex-shrink:0}
+  .watch{display:inline-flex;align-items:center;gap:7px;text-decoration:none;font-family:"Archivo";font-weight:700;font-size:13px;letter-spacing:.02em;background:var(--ink);color:#fff;padding:9px 15px;border-radius:10px;transition:.16s}
+  .watch:hover{background:var(--orange)}
+  .watch svg{width:12px;height:12px}
+
+  .pick{position:absolute;top:13px;right:13px;width:26px;height:26px;border-radius:8px;border:2px solid var(--line);background:#fff;cursor:pointer;display:none;align-items:center;justify-content:center;z-index:5;transition:.14s}
+  body.tailoring .pick{display:flex}
+  .pick svg{width:14px;height:14px;opacity:0;transition:.14s}
+  .card.selected .pick{background:var(--orange);border-color:var(--orange)}
+  .card.selected .pick svg{opacity:1}
+  body.tailoring .card{cursor:pointer}
+
+  .empty{display:none;text-align:center;padding:60px 20px;color:var(--muted)}
+  .empty.show{display:block}
+  .empty b{font-family:"Archivo";font-weight:800;font-size:20px;color:var(--ink);display:block;margin-bottom:6px}
+
+  footer{margin-top:40px;background:var(--ink);color:#CFC7BB}
+  footer .wrap{padding:38px 28px;display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:flex-start}
+  footer img{height:24px;opacity:.95;margin-bottom:12px}
+  footer .note{font-size:12.5px;line-height:1.6;max-width:46ch}
+  footer .note a{color:var(--amber);text-decoration:none}
+  footer .legal{font-size:11.5px;color:#897F72;margin-top:14px}
+  .confidential{font-family:"Archivo";font-weight:700;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);border:1px solid rgba(255,158,0,.4);border-radius:999px;padding:6px 14px;display:inline-block}
+
+  .footnote{font-size:11.5px;color:var(--muted);padding:18px 0 6px;line-height:1.55;max-width:80ch}
+
+  @media (max-width:560px){
+    .wrap,.brandbar,.masthead .wrap,footer .wrap{padding-left:18px;padding-right:18px}
+    .grid{grid-template-columns:1fr}
+    .brandbar .contact{display:none}
+  }
+  @media (prefers-reduced-motion:reduce){.ticker-track{animation:none}.card{transition:none;opacity:1;transform:none}}
+
+  @media print{
+    @page{margin:14mm}
+    body{background:#fff}
+    .ticker,.controls,.tailor,.pick,.brandbar .contact{display:none !important}
+    .masthead{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .distbanner{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .grid{grid-template-columns:1fr 1fr;gap:12px}
+    .card{opacity:1;transform:none;break-inside:avoid;box-shadow:none}
+    .card.hidden{display:none !important}
+    .cardmedia video{display:none !important}
+    .expo .big,.nichetag,.watch,.showviews .sv{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    footer{background:#fff;color:var(--ink);border-top:1px solid var(--line)}
+    footer .legal,footer .note a{color:var(--muted)}
+  }
+</style>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="brandbar">
+      <img src="https://df-cdn.b-cdn.net/GeneralLendingConfigs/landing_logo/DigitalFoxTalent-TextLogoBLACK-VECTOR.svg" alt="Digital Fox Talent">
+      <div class="contact">Talent booking &amp; press<br><a href="mailto:theteam@digitalfoxtalent.com">theteam@digitalfoxtalent.com</a></div>
+    </div>
+  </div>
+
+  <header class="masthead">
+    <div class="wrap">
+      <div class="eyebrow">Now booking &middot; Guest appearances</div>
+      <h1>Creators ready for the room</h1>
+      <p class="sub">Interview-ready talent across movies and gaming. Every guest spot is filmed once, then cut into clips, Shorts, Reels and social posts and syndicated across the network. Every name below is signed to Digital Fox Talent.</p>
+      <div class="creds">
+        <span>Founded 2019</span><span>500M+ views</span><span>1000+ campaigns</span><span>107M+ global reach</span>
+      </div>
+      <div class="preparedwrap" id="preparedWrap">
+        <div class="preparedfor"><label for="preparedInput">Prepared for</label><input id="preparedInput" type="text" placeholder="Show or booker name" autocomplete="off"></div>
+      </div>
+    </div>
+    <div class="ticker"><div class="ticker-track" id="ticker"></div></div>
+  </header>
+
+  <main class="wrap">
+
+    <section class="distbanner">
+      <div class="db-head">One booking, <span>distributed everywhere</span></div>
+      <p class="db-sub">A single guest interview is filmed once and repackaged into long-form, clips, Shorts, Reels, TikToks and social posts, then syndicated across the creator's full network. A premium show can run across up to 11 channels, putting one appearance in front of audiences again and again.</p>
+      <div class="db-chips">
+        <span class="lead">Long-form interview <b>&times;1</b></span>
+        <span>Clips <b>&times;3</b></span>
+        <span>Shorts <b>&times;3</b></span>
+        <span>TikTok <b>&times;3</b></span>
+        <span>Reels <b>&times;3</b></span>
+        <span>Stories <b>&times;3</b></span>
+        <span>X posts <b>&times;3</b></span>
+        <span>Facebook</span>
+        <span>MSN syndication</span>
+        <span>Spotify audio</span>
+      </div>
+    </section>
+
+    <div class="summary" id="summary"></div>
+
+    <div class="controls">
+      <div class="chips" id="chips"></div>
+      <div class="rightctl">
+        <select class="sort" id="sort" aria-label="Sort creators">
+          <option value="curated">Order: Featured</option>
+          <option value="reach">Order: Combined audience</option>
+          <option value="show">Order: Est. views per show</option>
+          <option value="yt">Order: YouTube reach</option>
+          <option value="az">Order: A to Z</option>
+        </select>
+        <button class="btn" id="tailorBtn">Tailor a pack &#9656;</button>
+      </div>
+    </div>
+
+    <div class="tailor" id="tailorBar">
+      <div class="hint" id="tailorHint">Pick the creators relevant to this show, add who it's for, then show just those.</div>
+      <input id="tailorName" type="text" placeholder="Show or booker name" autocomplete="off">
+      <button class="btn primary" id="tailorApply">Show selected (0)</button>
+      <button class="btn" id="tailorPrint">Save as PDF</button>
+      <button class="btn" id="tailorClear">Reset</button>
+    </div>
+
+    <div class="grid" id="grid"></div>
+    <div class="empty" id="empty"><b>No creators in this selection</b>Pick at least one creator, or reset the filters.</div>
+
+    <p class="footnote" id="footnote"></p>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div>
+        <img src="https://df-cdn.b-cdn.net/GeneralLendingConfigs/landing_logo/digital-fox-talent-pop-culture-influencers.svg" alt="Digital Fox Talent">
+        <div class="note">Digital Fox Talent represents content creators, podcasters and publishers across entertainment, gaming and pop culture. To book any creator for a guest appearance, reach out at <a href="mailto:theteam@digitalfoxtalent.com">theteam@digitalfoxtalent.com</a>.
+          <div class="legal">&copy; Digital Fox Talent 2026. All rights reserved. Figures are indicative and updated periodically.</div>
+        </div>
+      </div>
+      <span class="confidential">Private &middot; not for redistribution</span>
+    </div>
+  </footer>
+
+<script>
+const CREATORS = [
+  {n:"Kristian Harloff",h:"TheKristianHarloff",niche:"Movies",desc:"Long-form studio interviews with film & TV talent",yt:225000,ig:58900,tt:75100,showReach:3410000,loc:"California, US",u:"https://www.youtube.com/@TheKristianHarloff"},
+  {n:"Dan Murrell",h:"DanMurrellMovies",niche:"Movies",desc:"Box-office breakdowns and critic roundtables",yt:215000,ig:0,tt:0,showReach:490000,loc:"",u:"https://www.youtube.com/@DanMurrellMovies"},
+  {n:"Heavy Spoilers",h:"heavyspoilers",niche:"Movies",desc:"Spoiler breakdowns, theories and guest deep-dives",yt:1660000,ig:12700,tt:28600,showReach:240000,loc:"London, UK",u:"https://www.youtube.com/@heavyspoilers"},
+  {n:"The Reel Rejects",h:"thereelrejects",niche:"Movies",desc:"First-time reactions and watch-along breakdowns",yt:1460000,ig:44700,tt:40300,showReach:1760000,loc:"California, US",u:"https://www.youtube.com/@thereelrejects"},
+  {n:"Cinepals",h:"cinepals",niche:"Movies",desc:"Movie reactions and watch-alongs",yt:845000,ig:12400,tt:2670,showReach:570000,loc:"California, US",u:"https://www.youtube.com/@cinepals"},
+  {n:"Breakdowns & Blockbusters",h:"Breakdownsandblockbusters",niche:"Movies",desc:"Unmade films and behind-the-scenes Hollywood",yt:237000,ig:0,tt:0,showReach:490000,loc:"",u:"https://www.youtube.com/@Breakdownsandblockbusters"},
+  {n:"The Cosmic Wonder",h:"cosmicwonder",niche:"Movies",desc:"Marvel and cosmic-universe lore breakdowns",yt:989000,ig:48000,tt:14500,showReach:580000,loc:"Ohio, US",u:"https://www.youtube.com/@cosmicwonder"},
+  {n:"Everything Always",h:"everythingalways",niche:"Movies",desc:"Long-form film analysis and video essays",yt:1070000,ig:0,tt:0,showReach:1150000,loc:"",u:"https://www.youtube.com/@everythingalways"},
+  {n:"New Rockstars",h:"newrockstars",niche:"Movies",desc:"Frame-by-frame breakdowns of major franchises",yt:4350000,ig:192000,tt:89500,showReach:2100000,loc:"",u:"https://www.youtube.com/@newrockstars"},
+  {n:"ScreenCrush",h:"screencrush",niche:"Movies",desc:"Film & TV breakdowns, easter eggs and news",yt:1890000,ig:59700,tt:45400,showReach:1810000,loc:"",u:"https://www.youtube.com/@screencrush"},
+  {n:"Badd Medicine",h:"baddmedicine",niche:"Movies",desc:"Reactions and watch-along commentary",yt:479000,ig:5264,tt:0,showReach:520000,loc:"",u:"https://www.youtube.com/@baddmedicine"},
+  {n:"The Normies",h:"thenormies",niche:"Movies",desc:"Group reactions and discussion",yt:963000,ig:52900,tt:17600,showReach:580000,loc:"",u:"https://www.youtube.com/@thenormies"},
+  {n:"Heroes Reforged",h:"heroesreforged",niche:"Movies",desc:"Superhero and comic-book commentary",yt:147000,ig:22700,tt:5545,showReach:240000,loc:"",u:"https://www.youtube.com/@heroesreforged"},
+  {n:"John Rocha",h:"johnrochasays",niche:"Movies",desc:"Film reviews and roundtable debates",yt:41900,ig:0,tt:0,showReach:230000,loc:"",u:"https://www.youtube.com/@johnrochasays"},
+  {n:"Coy Jandreau",h:"CoyJandreau",niche:"Movies",desc:"Pop-culture hosting and talent interviews",yt:61400,ig:0,tt:0,showReach:230000,loc:"California, US",u:"https://www.youtube.com/@CoyJandreau"},
+  {n:"Variant Comics",h:"variantcomics",niche:"Movies",desc:"Comics history and adaptation deep-dives",yt:2690000,ig:42600,tt:0,showReach:1900000,loc:"",u:"https://www.youtube.com/@variantcomics"},
+  {n:"WesNemo",h:"WesNemo",niche:"Gaming",desc:"Gaming lore and narrative deep-dives",yt:180000,ig:0,tt:0,showReach:250000,loc:"",u:"https://www.youtube.com/@WesNemo"},
+  {n:"Chaos Gaming",h:"chaosgaming",niche:"Gaming",desc:"Gaming news, lists and commentary",yt:2690000,ig:0,tt:0,showReach:1350000,loc:"",u:"https://www.youtube.com/@chaosgaming"},
+  {n:"AJM_Nerdcore",h:"AJM_nerdcore",niche:"Movies",desc:"Fantasy, LOTR and Warhammer lore",yt:32100,ig:171000,tt:45400,showReach:230000,loc:"",u:"https://www.youtube.com/@AJM_nerdcore"},
+  {n:"The Movie Couple",h:"TheMovieCouple",niche:"Movies",desc:"Reviews and celebrity interviews",yt:80000,ig:0,tt:0,showReach:230000,loc:"",u:"https://www.youtube.com/@TheMovieCouple"},
+  {n:"Raine Emery",h:"RaineEmery",niche:"Movies",desc:"Cosplay, costume and fantasy world-building",yt:4500,ig:0,tt:0,showReach:230000,loc:"",u:"https://www.youtube.com/@RaineEmery"},
+  {n:"Jayden Rodrigues",h:"JaydenRodrigues",niche:"Movies",desc:"Celebrity interviews and pop-culture hosting",yt:1160000,ig:0,tt:600000,showReach:1720000,loc:"Sydney, AU",u:"https://www.youtube.com/@JaydenRodrigues"}
+];
+
+const NICHE_COLOR = {"Movies":"var(--movies)","Gaming":"var(--gaming)"};
+const CLIP_BASE = "https://df-cdn.b-cdn.net/guest-clips/";
+function mediaInner(clip,poster,sample){
+  return `${poster?`<img class="poster" src="${poster}" alt="" onerror="this.remove()">`:''}<video class="vid" muted loop playsinline preload="none"${poster?` poster="${poster}"`:''}><source src="${clip}" type="video/mp4"></video><div class="badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>Hover to preview</div>${sample?`<div class="tag-sample">Sample</div>`:''}`;
+}
+
+const compact = n => {
+  if(!n) return null;
+  if(n>=1000000) return (n/1000000).toFixed(n>=10000000?0:2).replace(/\.0+$/,'')+"M";
+  if(n>=1000) return Math.round(n/1000)+"K";
+  return ""+n;
+};
+const combined = c => (c.yt||0)+(c.ig||0)+(c.tt||0)+(c.x||0)+(c.sp||0);
+const initials = name => name.replace(/^The\s+/i,'').replace(/[&_]/g,' ').split(/\s+/).filter(Boolean).slice(0,2).map(w=>w[0]).join('').toUpperCase();
+
+let activeNiche="All", tailoring=false;
+const selected=new Set();
+const grid=document.getElementById('grid'), chipsEl=document.getElementById('chips'),
+      summaryEl=document.getElementById('summary'), ticker=document.getElementById('ticker'),
+      emptyEl=document.getElementById('empty');
+
+const tickHTML="<span>"+CREATORS.map(c=>"@"+c.h).join("</span><span>")+"</span>";
+ticker.innerHTML=tickHTML+tickHTML;
+
+const niches=["All",...Array.from(new Set(CREATORS.map(c=>c.niche)))];
+chipsEl.innerHTML=niches.map(nm=>`<button class="chip${nm==='All'?' active':''}" data-niche="${nm}">${nm}${nm==='All'?'':' \u00b7 '+CREATORS.filter(c=>c.niche===nm).length}</button>`).join("");
+chipsEl.querySelectorAll('.chip').forEach(b=>b.onclick=()=>{activeNiche=b.dataset.niche;chipsEl.querySelectorAll('.chip').forEach(x=>x.classList.toggle('active',x===b));render();});
+
+function buildSummary(list){
+  const reach=list.reduce((s,c)=>s+combined(c),0);
+  const nicheCount=new Set(list.map(c=>c.niche)).size;
+  summaryEl.innerHTML=
+    `<div class="stat"><b>${list.length}</b><em>creators booking guests</em></div>`+
+    `<div class="stat"><b>${compact(reach)||0}</b><em>combined audience across channels</em></div>`+
+    `<div class="stat"><b>${nicheCount}</b><em>${nicheCount===1?'genre':'genres'}</em></div>`;
+}
+
+function sortList(list){
+  const v=document.getElementById('sort').value;
+  if(v==='curated') return list;
+  const c=[...list];
+  if(v==='reach') c.sort((a,b)=>combined(b)-combined(a));
+  else if(v==='show') c.sort((a,b)=>(b.showReach||0)-(a.showReach||0));
+  else if(v==='yt') c.sort((a,b)=>b.yt-a.yt);
+  else if(v==='az') c.sort((a,b)=>a.n.localeCompare(b.n));
+  return c;
+}
+
+function platformHTML(c){
+  const parts=[];
+  if(c.yt) parts.push(`<div class="pf"><div class="v">${compact(c.yt)}</div><div class="k">YouTube</div></div>`);
+  if(c.ig>=1000) parts.push(`<div class="pf"><div class="v">${compact(c.ig)}</div><div class="k">Instagram</div></div>`);
+  if(c.tt>=1000) parts.push(`<div class="pf"><div class="v">${compact(c.tt)}</div><div class="k">TikTok</div></div>`);
+  if(!parts.length) parts.push(`<div class="pf"><div class="v">&mdash;</div><div class="k">Reach on request</div></div>`);
+  return `<div class="platforms">${parts.join("")}</div>`;
+}
+
+function cardHTML(c){
+  const col=NICHE_COLOR[c.niche]||"var(--ink)";
+  const watchUrl=c.w||c.u;
+  const comb=combined(c);
+  const sv = c.showReach
+    ? `<div class="showviews"><div class="sv">${compact(c.showReach)}</div><div class="svk">Est. views / show</div></div>`
+    : `<div class="showviews req"><div class="sv">On request</div><div class="svk">Est. views / show</div></div>`;
+  const loc=c.loc
+    ? `<span class="loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.3-7-11a7 7 0 0 1 14 0c0 4.7-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>${c.loc}</span>`
+    : `<span class="loc na"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.3-7-11a7 7 0 0 1 14 0c0 4.7-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Location on request</span>`;
+  return `<article class="card" data-h="${c.h}"${c.clip?'':` data-probe="${CLIP_BASE+encodeURIComponent(c.h)+'.mp4'}" data-poster="${CLIP_BASE+encodeURIComponent(c.h)+'.jpg'}"`}>
+    <div class="pick" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></div>
+    ${c.clip ? `<div class="cardmedia">${mediaInner(c.clip,c.poster,c.sample)}</div>` : ''}
+    <div class="chead">
+      <img class="avatar" src="https://unavatar.io/youtube/${c.h}?fallback=false" alt="${c.n}"
+           onerror="this.outerHTML='<div class=\\'avatar mono\\' style=\\'background:${col}\\'>${initials(c.n)}</div>'">
+      <div>
+        <div class="cname">${c.n}</div>
+        ${c.desc?`<div class="showname">${c.desc}</div>`:''}
+        <div class="cmeta"><span class="nichetag" style="background:${col}">${c.niche}</span><span class="handle">@${c.h}</span></div>
+      </div>
+    </div>
+    <div class="expo">
+      <div><div class="lab">Audience across channels</div><div class="big">${comb?compact(comb):'On request'}</div></div>
+      ${sv}
+    </div>
+    ${platformHTML(c)}
+    <div class="cfoot">${loc}
+      <a class="watch" href="${watchUrl}" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>Watch</a>
+    </div>
+  </article>`;
+}
+
+function paint(list){
+  buildSummary(list);
+  grid.innerHTML=list.map(cardHTML).join("");
+  emptyEl.classList.remove('show');
+  grid.querySelectorAll('.card').forEach((card,i)=>{
+    const h=card.dataset.h;
+    if(selected.has(h)) card.classList.add('selected');
+    card.addEventListener('click',e=>{
+      if(!tailoring) return;
+      if(e.target.closest('.watch')) return;
+      card.classList.toggle('selected');
+      selected.has(h)?selected.delete(h):selected.add(h);
+      updateApply();
+    });
+    setTimeout(()=>card.classList.add('in'),Math.min(i*28,360));
+  });
+  function wireMedia(m){
+    const v=m.querySelector('video'); if(!v) return;
+    const play=()=>{m.classList.add('playing');v.play().catch(()=>{});};
+    const stop=()=>{m.classList.remove('playing');v.pause();try{v.currentTime=0;}catch(e){}};
+    m.addEventListener('mouseenter',play);
+    m.addEventListener('mouseleave',stop);
+    m.addEventListener('click',e=>{if(tailoring)return;e.stopPropagation();m.classList.contains('playing')?stop():play();});
+  }
+  grid.querySelectorAll('.cardmedia').forEach(m=>wireMedia(m));
+  grid.querySelectorAll('.card[data-probe]').forEach(card=>{
+    if(card.querySelector('.cardmedia')) return;
+    const probe=card.dataset.probe, poster=card.dataset.poster;
+    const t=document.createElement('video'); t.muted=true; t.preload='metadata';
+    t.onloadedmetadata=()=>{
+      const div=document.createElement('div'); div.className='cardmedia';
+      div.innerHTML=mediaInner(probe,poster,false);
+      card.insertBefore(div, card.querySelector('.chead'));
+      wireMedia(div);
+    };
+    t.src=probe;
+  });
+  updateFootnote();
+}
+
+function render(){
+  let list=CREATORS.filter(c=>activeNiche==='All'||c.niche===activeNiche);
+  list=sortList(list);
+  paint(list);
+}
+
+function updateFootnote(){
+  document.getElementById('footnote').textContent=
+    "Audience across channels is the creator's combined following across their platforms. Est. views per show is a modelled figure built from the creator's long-form base plus the short-form and social distribution of each booking; per-creator detail is available from the team. Each booking is distributed as long-form plus clips, Shorts, Reels, TikToks and social posts across the creator's network.";
+}
+
+const tailorBtn=document.getElementById('tailorBtn'),tailorBar=document.getElementById('tailorBar'),
+      tailorApply=document.getElementById('tailorApply'),tailorClear=document.getElementById('tailorClear'),
+      tailorPrint=document.getElementById('tailorPrint'),tailorName=document.getElementById('tailorName'),
+      preparedWrap=document.getElementById('preparedWrap'),preparedInput=document.getElementById('preparedInput');
+
+function updateApply(){tailorApply.textContent=`Show selected (${selected.size})`;}
+
+tailorBtn.onclick=()=>{
+  tailoring=!tailoring;
+  document.body.classList.toggle('tailoring',tailoring);
+  tailorBar.classList.toggle('show',tailoring);
+  tailorBtn.innerHTML=tailoring?'Cancel tailoring':'Tailor a pack &#9656;';
+  if(!tailoring){activeNiche='All';chipsEl.querySelectorAll('.chip').forEach(x=>x.classList.toggle('active',x.dataset.niche==='All'));render();}
+};
+tailorApply.onclick=()=>{
+  if(selected.size===0){grid.innerHTML='';emptyEl.classList.add('show');return;}
+  let list=CREATORS.filter(c=>selected.has(c.h));list=sortList(list);paint(list);
+  const name=tailorName.value.trim();
+  if(name){preparedInput.value=name;preparedWrap.classList.add('show');}
+  window.scrollTo({top:0,behavior:'smooth'});
+};
+tailorName.addEventListener('input',()=>{if(tailorName.value.trim()){preparedInput.value=tailorName.value.trim();preparedWrap.classList.add('show');}});
+tailorClear.onclick=()=>{
+  selected.clear();tailorName.value='';preparedInput.value='';preparedWrap.classList.remove('show');updateApply();
+  activeNiche='All';chipsEl.querySelectorAll('.chip').forEach(x=>x.classList.toggle('active',x.dataset.niche==='All'));render();
+};
+tailorPrint.onclick=()=>window.print();
+document.getElementById('sort').onchange=()=>render();
+
+render();
+</script>
+</body>
+</html>
